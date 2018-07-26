@@ -1,0 +1,28 @@
+{
+    "name": "bentools/gmaps-api-sign-url",
+    "description": "Sign Google Static Maps API Urls. No dependency.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "BenTools\\GmapsApiSigner\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BenTools\\GmapsApiSigner\\Tests\\": "tests"
+        },
+        "files": [
+            "vendor/symfony/var-dumper/Resources/functions/dump.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable",
+        "symfony/var-dumper": "@stable",
+        "php-coveralls/php-coveralls": "@stable",
+        "squizlabs/php_codesniffer": "@stable"
+    },
+    "license": "MIT"
+}
