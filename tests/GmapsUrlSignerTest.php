@@ -13,7 +13,7 @@ class GmapsUrlSignerTest extends TestCase
         $secretKey = 'nSlpOGNt10hB_FU1-RGfs3tvh0o=';
         $signer = new GmapsUrlSigner($secretKey);
         $url = 'https://maps.googleapis.com/maps/api/js?key=foo_bar';
-        $expected = 'https://maps.googleapis.com/maps/api/js?key=foo_bar&signature=Sc3meb0HXImPjMMUiICRtekp3mk=';
+        $expected = 'https://maps.googleapis.com/maps/api/js?key=foo_bar&signature=Sc3meb0HXImPjMMUiICRtekp3mk%3D';
         $this->assertEquals($expected, $signer->sign($url));
     }
 
@@ -22,7 +22,7 @@ class GmapsUrlSignerTest extends TestCase
         $secretKey = 'nSlpOGNt10hB_FU1-RGfs3tvh0o=';
         $sign = new GmapsUrlSigner($secretKey);
         $url = 'https://maps.googleapis.com/maps/api/js?key=foo_bar';
-        $expected = 'https://maps.googleapis.com/maps/api/js?key=foo_bar&signature=Sc3meb0HXImPjMMUiICRtekp3mk=';
+        $expected = 'https://maps.googleapis.com/maps/api/js?key=foo_bar&signature=Sc3meb0HXImPjMMUiICRtekp3mk%3D';
         $this->assertEquals($expected, $sign($url));
     }
 }
